@@ -6,7 +6,7 @@
 #    By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/29 12:27:33 by rpanetta          #+#    #+#              #
-#    Updated: 2025/11/02 20:36:09 by rpanetta         ###   ########.fr        #
+#    Updated: 2025/11/02 20:50:11 by rpanetta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,11 +46,11 @@ clean:
 
 fclean: clean
 	@make -C $(LIBFT_DIR) fclean
-	@$(RM) $(NAME)
+	@$(RM) $(NAME) a.out
 
 re: fclean all
 
 executable: $(NAME)
-	@$(CC) $(FLAGS) $(OBJECTS) $(LIBFT)
+	@$(CC) $(FLAGS) $(OBJECTS) $(LIBFT) -o a.out
 
 .PHONY: all clean fclean re
