@@ -6,7 +6,7 @@
 /*   By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 12:11:33 by rpanetta          #+#    #+#             */
-/*   Updated: 2025/11/02 19:09:13 by rpanetta         ###   ########.fr       */
+/*   Updated: 2025/11/02 22:03:38 by rpanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,19 @@ int	ft_printf(const char *format, ...)
 int main(void)
 {
 	char	c = 'R';
-	int		len;
-	len = ft_printf("Mi nombre empieza con la letra: %c\n", c);
-	ft_printf("Len es: %i\n", len);
+	int		len1;
+	len1 = ft_printf("Mi nombre empieza con la letra: %c\n", c);
+	ft_printf("Len es: %i\n", len1);
+	// TEST2
+	char	str[] = "Rocio";
+	int		len2;
+	len2 = ft_printf("My name is: %s\n", str);
+	ft_printf("Len es: %i\n", len2);
+	// TEST3
+	int	age = 28;
+	int	len3;
+	len3 = ft_printf("I'm %i years old\n", age);
+	ft_printf("Len es: %i\n", len3);
+	// TEST4
 	return (0);
 }
