@@ -6,7 +6,7 @@
 /*   By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 12:11:01 by rpanetta          #+#    #+#             */
-/*   Updated: 2025/10/31 14:49:03 by rpanetta         ###   ########.fr       */
+/*   Updated: 2025/11/03 17:04:42 by rpanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,28 @@ static int	ft_print_ptr_hex(unsigned long n)
 	base = "0123456789abcdef";
 	if (n >= 16)
 	{
-		len += ft_print_ptr_hex(n / 16);
+		len = len + ft_print_ptr_hex(n / 16);
 	}
-	len += ft_putchar_fd(base[n % 16]);
+	len = len + ft_putchar_printf(base[n % 16]);
 	return (len);
-		
 }
+
 int	ft_print_ptr(unsigned long ptr)
 {
 	int	len;
 
 	len = 0;
-	if (ptr == NULL)
+	if (!ptr)
 	{
-		return (ft_putstr_fd("(nil)"));
+		return (ft_putstr_printf("(nil)"));
 	}
-	len += ft_putstr_fd("0x");
-	len += ft_print_ptr_hex(ptr);
+	len = len + ft_putstr_printf("0x");
+	len = len + ft_print_ptr_hex(ptr);
 	return (len);
 }
 // int main(void)
 // {
-// 	int	x = 5;
+// 	int	x = 26;
 // 	int	*ptr = &x;
 // 	int	*null_ptr = NULL;
 // 	printf("%p\n", ptr);

@@ -6,7 +6,7 @@
 #    By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/29 12:27:33 by rpanetta          #+#    #+#              #
-#    Updated: 2025/11/02 20:50:11 by rpanetta         ###   ########.fr        #
+#    Updated: 2025/11/03 16:59:05 by rpanetta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,10 @@ NAME = libftprintf.a
 SOURCES = ft_printf.c\
 utils/ft_putchar_printf.c\
 utils/ft_putstr_printf.c\
+utils/ft_print_ptr.c\
 utils/ft_putnbr_printf.c\
+utils/ft_print_unsigned.c\
+utils/ft_print_hex.c\
 
 OBJECTS = $(SOURCES:%.c=%.o)
 

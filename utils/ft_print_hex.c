@@ -6,7 +6,7 @@
 /*   By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:45:49 by rpanetta          #+#    #+#             */
-/*   Updated: 2025/11/02 18:22:19 by rpanetta         ###   ########.fr       */
+/*   Updated: 2025/11/03 17:02:58 by rpanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,17 @@ int	ft_print_hex(unsigned int n, char format)
 {
 	int		len;
 	char	*base;
-	
-	return (0);
+
+	len = 0;
+	if (format == 'x')
+		base = "0123456789abcdef";
+	else
+		base = "0123456789ABCDEF";
+	if (n >= 16)
+	{
+		len = len + ft_print_hex((n / 16), format);
+	}
+	ft_putchar_printf(base[n % 16]);
+	len++;
+	return (len);
 }

@@ -20,8 +20,9 @@ int	ft_putstr_printf(char *s)
 		s = "(null)";
 	}
 	ft_putstr_fd(s, 1);
-	return(ft_strlen(s));
+	return (ft_strlen(s));
 }
+
 // int main(void)
 // {
 // 	char	str[] = "how are you?";
