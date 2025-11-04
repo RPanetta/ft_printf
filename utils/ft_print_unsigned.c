@@ -6,12 +6,12 @@
 /*   By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:29:59 by rpanetta          #+#    #+#             */
-/*   Updated: 2025/11/03 17:03:18 by rpanetta         ###   ########.fr       */
+/*   Updated: 2025/11/04 11:32:41 by rpanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "libft/libft.h"
+#include "../ft_printf.h"
+#include "../libft/libft.h"
 
 int	ft_print_unsigned(unsigned int n)
 {

@@ -6,7 +6,7 @@
 #    By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/29 12:27:33 by rpanetta          #+#    #+#              #
-#    Updated: 2025/11/03 16:59:05 by rpanetta         ###   ########.fr        #
+#    Updated: 2025/11/04 12:24:33 by rpanetta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	@make -C $(LIBFT_DIR) all
-	@$(AR) $(NAME) $(OBJECTS) $(LIBFT)
+	@cp $(LIBFT) .
+	@$(AR) $(NAME) $(OBJECTS) $(LIBFT_DIR)/*.o
 
 %.o: %.c
 	@$(CC) $(FLAGS) -c $< -o $@
@@ -49,11 +50,11 @@ clean:
 
 fclean: clean
 	@make -C $(LIBFT_DIR) fclean
-	@$(RM) $(NAME) a.out
+	@$(RM) $(NAME) a.out libft.a
 
 re: fclean all
 
 executable: $(NAME)
-	@$(CC) $(FLAGS) $(OBJECTS) $(LIBFT) -o a.out
+	@$(CC) $(FLAGS) $(OBJECTS) $(LIBFT_DIR)/*.o -o a.out
 
 .PHONY: all clean fclean re

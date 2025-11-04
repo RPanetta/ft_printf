@@ -6,7 +6,7 @@
 /*   By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 12:11:33 by rpanetta          #+#    #+#             */
-/*   Updated: 2025/11/03 17:11:04 by rpanetta         ###   ########.fr       */
+/*   Updated: 2025/11/04 12:58:34 by rpanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1] == '\0')
 			return (count);
-			//break;
 		else if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			count = count + ft_conversion(format[i + 1], &args);
@@ -101,9 +100,11 @@ int	ft_printf(const char *format, ...)
 // 	ft_printf("\nPrint len: %u\n", len5);
 // 	// TEST6
 // 	int nmr = 255;
+// 	int nmr2 = 2587856;
 // 	int len6;
 // 	len6 = ft_printf("Hexadecimal is: %x\n", nmr);
-// 	len6 = ft_printf("Hexadecimal is: %x\n", nmr);
+// 	len6 = ft_printf("Hexadecimal is: %x\n", nmr2);
+// 	len6 = ft_printf("Hexadecimal is: %X\n", nmr);
 // 	ft_printf("Len es: %i\n", len6);
 // 	//TEST7
 // 	char	sing = '%';

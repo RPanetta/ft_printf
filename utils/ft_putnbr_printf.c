@@ -21,5 +21,6 @@ int	ft_putnbr_printf(int n)
 	ft_putnbr_fd(n, 1);
 	str = ft_itoa(n);
 	len = ft_strlen(str);
+	free(str);
 	return (len);
 }

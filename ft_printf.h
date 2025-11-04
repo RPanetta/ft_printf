@@ -6,7 +6,7 @@
 /*   By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 12:27:48 by rpanetta          #+#    #+#             */
-/*   Updated: 2025/11/03 16:09:34 by rpanetta         ###   ########.fr       */
+/*   Updated: 2025/11/04 11:36:21 by rpanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 
 int		ft_printf(const char *format, ...);
-int     ft_putchar_printf(char c);
+int		ft_putchar_printf(char c);
 int		ft_putstr_printf(char *s);
 int		ft_print_ptr(unsigned long ptr);
 int		ft_putnbr_printf(int n);

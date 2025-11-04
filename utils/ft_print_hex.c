@@ -6,11 +6,11 @@
 /*   By: rpanetta <rpanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:45:49 by rpanetta          #+#    #+#             */
-/*   Updated: 2025/11/03 17:02:58 by rpanetta         ###   ########.fr       */
+/*   Updated: 2025/11/04 11:31:57 by rpanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_print_hex(unsigned int n, char format)
 {
